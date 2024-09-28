@@ -10,6 +10,7 @@ use App\Models\User;
 use GuzzleHttp\RetryMiddleware;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Http;
 
 class AdminController extends Controller
 {
@@ -18,7 +19,7 @@ class AdminController extends Controller
         $this->middleware('auth');
     }
     public function getCountry()
-    {
+    {     
        $countryData = country::all();
        return view('admin.user.add', compact('countryData'));
     }

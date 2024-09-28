@@ -44,6 +44,15 @@
                                         </div>
                                     </div>
                                     <div class="form-group">
+                                        <label class="col-md-12">Image</label>
+                                        <div class="col-md-12">
+                                            <input type="file" class="form-control" name="image" >
+                                            {{-- <div class="flex items-center justify-center my-5">
+                                                <img src="{{asset('upload/category/'.$dataEdit->image)}}" alt="" style="width: 200px">                                   
+                                            </div> --}}
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
                                         <div class="col-sm-12">
                                             <button  type="submit" class="btn btn-success">Add Category</button>
                                         </div>

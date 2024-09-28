@@ -64,6 +64,7 @@ class BlogController extends Controller
     {   
         $dataEdit = blog::find($id);
         return view('admin.blog.edit', compact('dataEdit'));
+      
     }
     public function update(UpdateRequest $request, string $id)
     {
@@ -92,7 +93,7 @@ class BlogController extends Controller
                 $path = public_path('upload/blog/'.$img);
                 $path_2 = public_path('upload/blog/'.$img_2);
                 $path_3 = public_path('upload/blog/'.$img_3);
-
+                
                 Image::make($image->getRealPath())->save($path);
                 Image::make($image->getRealPath())->save($path_2);
                 Image::make($image->getRealPath())->save($path_3);

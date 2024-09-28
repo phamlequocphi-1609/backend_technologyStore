@@ -22,8 +22,14 @@ class CategoryController extends Controller
     public function create(CategoryRequest $request)
     {
         $category = $request->all();
+        $file = $request->image;
+        if(!empty($file)){
+            $category['image'] = $file->getClientOriginalName();
+         
+            $file->move(public_path('upload/category'), $file->getClientOriginalName());
+        }
         if(category::create($category)){
-            return redirect('/admin/category/add')->with('success', 'Data added successfully');
+            return redirect('/admin/category/list')->with('success', 'Data added successfully');
         }else{
             return redirect()->back()->withErrors('Data added failed');
         }
