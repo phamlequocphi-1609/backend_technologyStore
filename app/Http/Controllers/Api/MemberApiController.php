@@ -9,7 +9,6 @@ use App\Http\Requests\api\MemberUpdateRequest;
 use App\Models\admin\country;
 use App\Models\User;
 use Illuminate\Http\JsonResponse;
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Intervention\Image\Facades\Image;
 class MemberApiController extends Controller

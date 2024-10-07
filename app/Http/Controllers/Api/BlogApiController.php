@@ -8,14 +8,12 @@ use App\Http\Requests\api\RateBlogRequest;
 use App\Models\admin\blog;
 use App\Models\admin\comments;
 use App\Models\admin\rate_blog;
-use Illuminate\Http\Request;
 
-use function PHPSTORM_META\map;
 
 class BlogApiController extends Controller
 {
     public $successStatus = 200;
-  
+
     public function blogList()
     {
         $blogs = blog::with('comment')->get();

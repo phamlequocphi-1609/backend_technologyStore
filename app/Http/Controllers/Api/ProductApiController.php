@@ -13,7 +13,6 @@ use App\Models\admin\commentProduct;
 use App\Models\admin\product;
 use App\Models\admin\rate_product;
 use Illuminate\Http\Request;
-use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\Auth;
 use Intervention\Image\Facades\Image;
 class ProductApiController extends Controller
