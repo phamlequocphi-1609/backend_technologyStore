@@ -11,7 +11,6 @@ use Illuminate\Support\Facades\Mail;
 
 class MailController extends Controller
 {
- 
     private function generateOrderCode()
     {
         $date = Carbon::now()->format('ymd'); 

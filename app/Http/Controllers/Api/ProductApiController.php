@@ -183,7 +183,6 @@ class ProductApiController extends Controller
         ],$this->successStatus);
     }
     public function productDetail(string $id){
-        
         $productDetail = product::with(['commentProduct' => function($q){
             $q->orderBy('id', 'desc');
         }])->find($id);
