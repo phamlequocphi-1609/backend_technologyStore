@@ -13,7 +13,7 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 Route::group([
     'namespace'=>'Api'
 ], function(){
-    // member
+    // member00
     Route::post('/user/login', [MemberApiController::class, 'login']);
     Route::post('/user/register', [MemberApiController::class, 'register']);
     Route::get('/country', [MemberApiController::class, 'country']);
